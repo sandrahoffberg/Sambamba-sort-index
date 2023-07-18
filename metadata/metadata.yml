@@ -1,14 +1,14 @@
 metadata_version: 1
-name: Copy of Sambamba Filtering (Duplicates, Multimappers, Unaligned)
+name: Sambamba Sort
 description: |-
-  Remove optical and PCR duplicates from Illumina data using the software tool Sambamba. Sambamba is intended to be a drop in replacement for Picard MarkDuplicates but more performant.
+  Sort reads in a BAM file by (integer) reference ID or lexicographically by name. , sort Sambamba is intended to be a drop in replacement for Picard MarkDuplicates but more performant.
 
-  Source : https://lomereiter.github.io/sambamba/docs/sambamba-markdup.html
+  Source : https://lomereiter.github.io/sambamba/docs/sambamba-sort.html
 tags:
-- Mark Duplicates
 - Sambamba
 - Utilities
 - Genomics
-- Filtering
 - Alignment
 - DNA
+authors:
+- name: Sandra Hoffberg

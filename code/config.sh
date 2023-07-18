@@ -16,46 +16,19 @@ else
   num_threads="${1}"
 fi
 
-if [ "$2" = "mark" ]; then
-  remove=""
-else
-  remove="-r"
-fi
 
-if [ -z "${3}" ]; then
+if [ -z "${2}" ]; then
   compress_int=5
 else
-  compress_int="${3}"
+  compress_int="${2}"
 fi
 
-if [ -z "${4}" ]; then
-  sort_bams="True"
+
+if [ "${3}" == "coordinate" ]; then
+  sort_by="coordinate"
 else
-  sort_bams="${4}"
+  sort_by="qname"
 fi
 
-if [ -z "${5}" ]; then
-  filter_dups="True"
-else
-  filter_dups="${5}"
-fi
-
-if [ -z "${6}" ]; then
-  filter_unaligned="False"
-else
-  filter_unaligned="${6}"
-fi
-
-if [ -z "${7}" ]; then
-  filter_multimappers="False"
-else
-  filter_multimappers="${7}"
-fi
-
-if [ -z "${8}" ]; then
-  min_read_quality=0
-else
-  min_read_quality="${8}"
-fi
 
 temp_dir="../scratch/tmp"

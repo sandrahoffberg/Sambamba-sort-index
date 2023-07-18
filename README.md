@@ -2,7 +2,7 @@
 
 <hr>
 
-# Mark or Remove Optical and PCR Duplicates in Illumina data using Sambamba
+# Sort reads in a BAM file Mark using Sambamba
 
 This capsule requires alignment files in bam format. Sambamba can filter out poor mapping quality, duplicates, secondary/multimapped and unmapped reads from your alignment file. It will return your processed bam file to the results folder.
 
@@ -22,28 +22,13 @@ This capsule requires alignment files in bam format. Sambamba can filter out poo
 Number of Threads
 - Number of threads reserved for sambamba
 
-Remove or mark duplicates
-- Determines whether duplicates are fully removed from the .bam file or whether they are just marked. 
 
 Compression
 - specify compression level of the resulting file (from 0 to 9)
 
-Sort by Coordinates and Index
-- Determines whether output files are sorted and indexed. 
-
-## Auxiliary Parameters
-
-Filter Duplicates
-- Remove optical and PCR duplicates from alignment data. (Default: True)
-
-Filter Unaligned Reads
-- Remove reads which are not aligned or (for paired end data) reads whose mate pair is not aligned (Default: False)
-
-Filter Multimappers
-- Filter secondary alignments and (for paired end data) single ended (Default: False) 
-
-Min Read Mapping
-- Filter reads below this MAPQ score (Default: 0)
+Sort by
+- coordinate: integer reference ID [Default]
+- qname: lexicographically by name
 
 ## Other Notes
 
