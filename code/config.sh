@@ -11,7 +11,7 @@ else
 fi
 
 if [ -z "${1}" ]; then
-  num_threads=$(get_cpu_count.py)
+  num_threads=$(get_cpu_count)
 else
   num_threads="${1}"
 fi
@@ -24,10 +24,10 @@ else
 fi
 
 
-if [ "${3}" == "coordinate" ]; then
-  sort_by="coordinate"
+if [ "${3}" == "qname" ]; then
+  sort_by="-n"
 else
-  sort_by="qname"
+  sort_by=
 fi
 
 

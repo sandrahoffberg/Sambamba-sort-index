@@ -1,4 +1,4 @@
-# hash:sha256:fcd2db66e1c7369ea6a3b12d8cee8deb9947d0c6317cbe50bc258f5c14856c6b
+# hash:sha256:e3eb9fdb76db4d2dacfcf37858c7830e074cd783876bf2519668284e09fd1599
 FROM registry.apps.codeocean.com/codeocean/mambaforge3:22.11.1-4-ubuntu22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -13,5 +13,5 @@ RUN conda install -y --channel=bioconda \
         sambamba==1.0 \
     && conda clean -ya
 
-COPY postInstall /
-RUN /postInstall
+RUN pip install -U --no-cache-dir \
+    code-ocean-aux-tools==1.0.3
