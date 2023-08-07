@@ -1,14 +1,11 @@
 metadata_version: 1
 name: Sambamba Sort
-description: |-
-  Sort reads in a BAM file by (integer) reference ID or lexicographically by name. , sort Sambamba is intended to be a drop in replacement for Picard MarkDuplicates but more performant.
-
-  Source : https://lomereiter.github.io/sambamba/docs/sambamba-sort.html
+description: "Sort reads in a BAM file by (integer) reference ID or lexicographically
+  by name. \n\nSource : https://lomereiter.github.io/sambamba/docs/sambamba-sort.html"
 tags:
 - Sambamba
 - Utilities
 - Genomics
-- Alignment
-- DNA
+- Sort
 authors:
 - name: Sandra Hoffberg

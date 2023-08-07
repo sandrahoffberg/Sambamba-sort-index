@@ -4,10 +4,6 @@
 
 # Sort reads in a BAM file Mark using Sambamba
 
-This capsule requires alignment files in bam format. Sambamba can filter out poor mapping quality, duplicates, secondary/multimapped and unmapped reads from your alignment file. It will return your processed bam file to the results folder.
-
-[Documentation](https://lomereiter.github.io/sambamba/docs/sambamba-markdup.html)
-
 
 ## Input data
 
@@ -15,7 +11,7 @@ This capsule requires alignment files in bam format. Sambamba can filter out poo
 
 ## Outputs
 
-.bam files in individual folders (optionally sorted with index files)
+A folder for each sample containing a sorted .bam file and .bai index
 
 ## App Panel Parameters
 
@@ -24,18 +20,16 @@ Number of Threads
 
 
 Compression
-- specify compression level of the resulting file (from 0 to 9)
+- specify compression level of the resulting file (from 0 to 9) [Default: 5]
 
 Sort by
 - coordinate: integer reference ID [Default]
 - qname: lexicographically by name
 
-## Other Notes
-
-This capsule is an alternative to ```samtools markdup``` and ```picard markduplicates```. 
 
 ## Source 
 
+[Documentation](https://lomereiter.github.io/sambamba/docs/sambamba-sort.html)
 https://github.com/biod/sambamba
 
 ## Cite
