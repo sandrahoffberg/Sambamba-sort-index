@@ -2,7 +2,7 @@
 
 <hr>
 
-# Sort reads in a BAM file Mark using Sambamba
+# Sort and index reads in a BAM file using Sambamba
 
 
 ## Input data
@@ -18,7 +18,6 @@ A folder for each sample containing a sorted .bam file and .bai index
 Number of Threads
 - Number of threads reserved for sambamba
 
-
 Compression
 - specify compression level of the resulting file (from 0 to 9) [Default: 5]
 
@@ -29,12 +28,12 @@ Sort by
 
 ## Source 
 
+https://github.com/biod/sambamba <br>
 [Documentation](https://lomereiter.github.io/sambamba/docs/sambamba-sort.html)
-https://github.com/biod/sambamba
 
 ## Cite
 
-```A. Tarasov, A. J. Vilella, E. Cuppen, I. J. Nijman, and P. Prins. Sambamba: fast processing of NGS alignment formats. Bioinformatics, 2015.```
+A. Tarasov, A. J. Vilella, E. Cuppen, I. J. Nijman, and P. Prins. Sambamba: fast processing of NGS alignment formats. Bioinformatics, 2015.
 
 <hr>
 
