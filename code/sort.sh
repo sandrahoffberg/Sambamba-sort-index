@@ -3,8 +3,6 @@ set -ex
 
 source ./config.sh
 
-file_count=$(find -L ../data -name "*.bam" | wc -l)
-bamfiles=$(find -L ../data -name "*.bam")
 
 echo "Number of input files: $file_count"
 echo "Using $num_threads threads"

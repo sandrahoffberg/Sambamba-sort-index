@@ -10,10 +10,18 @@ else
   echo ""
 fi
 
+bamfiles=$(find -L ../data -name "*.bam")
+file_count=$(echo $bamfiles | wc -w)
+
 if [ -z "${1}" ]; then
-  num_threads=$(get_cpu_count)
+  num_threads=$CO_CPUS
 else
-  num_threads="${1}"
+  if [ "${1}" -gt $CO_CPUS ]; then
+    echo "Requesting more threads than available. Setting to Max Available."
+    num_threads=$CO_CPUS
+  else
+    num_threads="${1}"
+  fi
 fi
 
 
