@@ -12,7 +12,6 @@ then
     for bamfile in ${bamfiles};
     do  
         prefix=$(basename $bamfile .bam)
-        #prefix=$(get_read_prefix "$filename" "4")
         mkdir -p "../results/${prefix}"
 
         sambamba sort -t "${num_threads}" ${sort_by} -l ${compress_int} --tmpdir="${temp_dir}" -o "../results/${prefix}/${prefix}.bam" ${bamfile}
