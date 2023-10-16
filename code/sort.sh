@@ -33,7 +33,7 @@ then
         ${show_progress} \
         ${check_bins} \
         "../scratch/${prefix}/${prefix}.bam" \
-        ../results/${prefix}/${prefix}.bam"
+        "../results/${prefix}/${prefix}.bam"
 
     done
 else
