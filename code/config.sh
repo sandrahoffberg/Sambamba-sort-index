@@ -67,4 +67,10 @@ else
   show_progress=""
 fi
 
+if [ "${8}" == "True" ]; then
+  check_bins="--check-bins"
+else
+  check_bins=""
+fi
+
 temp_dir="../scratch/tmp"
