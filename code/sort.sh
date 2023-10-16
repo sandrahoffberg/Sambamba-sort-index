@@ -32,7 +32,6 @@ then
         -t "${num_threads}" \
         ${show_progress} \
         ${check_bins} \
-        
         "../results/${prefix}/${prefix}.bam"
 
     done
