@@ -11,7 +11,7 @@
 
 ## Outputs
 
-A folder for each sample containing a sorted .bam file and (if you have selected Generate Index) .bai index
+A folder for each sample containing a sorted .bam file and (if you have selected Generate Index) .bai index.
 
 ## App Panel Parameters
 
