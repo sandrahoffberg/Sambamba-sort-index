@@ -26,17 +26,45 @@ fi
 
 
 if [ -z "${2}" ]; then
-  compress_int=5
+  compress_int="-l 5"
 else
-  compress_int="${2}"
+  compress_int="-l ${2}"
 fi
-
 
 if [ "${3}" == "qname" ]; then
   sort_by="-n"
 else
-  sort_by=
+  sort_by=""
 fi
 
+if [ "${4}" == "True" ]; then
+  sort_picard="--sort-picard"
+else
+  sort_picard=""
+fi
+
+if [ "${5}" == "True" ]; then
+  natural_sort="--natural-sort"
+else
+  natural_sort=""
+fi
+
+if [ "${6}" == "True" ]; then
+  match_mates="--match-mates"
+else
+  match_mates=""
+fi
+
+if [ "${7}" == "True" ]; then
+  uncompress_chunks="--uncompressed-chunks"
+else
+  uncompress_chunks=""
+fi
+
+if [ "${8}" == "True" ]; then
+  show_progress="--show-progress"
+else
+  show_progress=""
+fi
 
 temp_dir="../scratch/tmp"

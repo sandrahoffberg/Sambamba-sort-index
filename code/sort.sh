@@ -17,7 +17,12 @@ then
         sambamba sort \
         -t "${num_threads}" \
         ${sort_by} \
-        -l ${compress_int} \
+        ${sort_picard} \
+        ${natural_sort} \
+        ${match_mates} \
+        ${uncompress_chunks} \
+        ${show_progress} \
+        ${compress_int} \
         --tmpdir="${temp_dir}" \
         -o "../results/${prefix}/${prefix}.bam" \
         ${bamfile}
