@@ -33,7 +33,7 @@ fi
 if [ -z "${3}" ]; then
     sort_by="coordinate"
 else
-    sort_by="${5}"
+    sort_by="${3}"
 fi
 
 if [ "${4}" == "True" ]; then
