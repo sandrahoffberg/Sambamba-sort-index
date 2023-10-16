@@ -31,7 +31,7 @@ else
   compress_int="-l ${2}"
 fi
 
-if [ "${3}" == "qname" ]; then
+if [ "${3}" == "True" ]; then
   sort_by="-n"
 else
   sort_by=""
@@ -78,5 +78,8 @@ if [ "${10}" == "True" ]; then
 else
   check_bins=""
 fi
+
+
+
 
 temp_dir="../scratch/tmp"
