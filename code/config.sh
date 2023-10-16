@@ -10,8 +10,14 @@ else
   echo ""
 fi
 
+
+# Alignment
 bamfiles=$(find -L ../data -name "*.bam")
 file_count=$(echo $bamfiles | wc -w)
+
+# FASTA
+fasta_files=$(find -L ../data -name "*.fasta" -o -name "*.fa")
+fasta_count=$(echo $fasta_files | wc -w)
 
 if [ -z "${1}" ]; then
   num_threads=$CO_CPUS
