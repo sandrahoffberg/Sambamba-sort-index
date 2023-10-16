@@ -79,6 +79,4 @@ else
 fi
 
 
-
-
 temp_dir="../scratch/tmp"
