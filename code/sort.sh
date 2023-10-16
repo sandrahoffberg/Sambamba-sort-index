@@ -11,6 +11,7 @@ then
 
     for bamfile in ${bamfiles};
     do  
+    
         prefix=$(basename $bamfile .bam)
         mkdir -p "../results/${prefix}"
 
@@ -33,7 +34,7 @@ then
 
         if [ ${generate_index} -eq 1 ];
         then
-        
+
             echo "Beginning to Index"
 
             sambamba index \
