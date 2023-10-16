@@ -45,8 +45,9 @@ Check Bins
 
 ## Source 
 
-https://github.com/biod/sambamba <br>
-[Documentation](https://lomereiter.github.io/sambamba/docs/sambamba-sort.html)
+- https://github.com/biod/sambamba <br>
+- [Sorting](https://lomereiter.github.io/sambamba/docs/sambamba-sort.html)
+- [Indexing](https://lomereiter.github.io/sambamba/docs/sambamba-index.html)
 
 ## Cite
 
