@@ -21,10 +21,10 @@ then
 
         sambamba sort \
         -t "${num_threads}" \
+        --show-progress \
         ${sort_by} \
         ${match_mates} \
         ${uncompress_chunks} \
-        ${show_progress} \
         ${compress_int} \
         --tmpdir="${temp_dir}" \
         -o "../results/${prefix}/${prefix}.bam" \
@@ -32,14 +32,14 @@ then
 
         echo "Finished Sorting!"
 
-        if [ ${generate_index} -eq 1 ];
+        if [ ${sort_by} == "coordinate" ];
         then
 
             echo "Beginning to Index"
 
             sambamba index \
+            --show-progress \
             -t "${num_threads}" \
-            ${show_progress} \
             ${check_bins} \
             "../results/${prefix}/${prefix}.bam" 
 

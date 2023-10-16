@@ -51,18 +51,6 @@ else
 fi
 
 if [ "${6}" == "True" ]; then
-  show_progress="--show-progress"
-else
-  show_progress=""
-fi
-
-if [ "${7}" == "True" ]; then
-  generate_index="1"
-else
-  generate_index="0"
-fi
-
-if [ "${8}" == "True" ]; then
   check_bins="--check-bins"
 else
   check_bins=""
