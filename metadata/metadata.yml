@@ -1,7 +1,8 @@
 metadata_version: 1
 name: Sambamba Sort
 description: "Sort reads in a BAM file by (integer) reference ID or lexicographically
-  by name. \n\nSource : https://lomereiter.github.io/sambamba/docs/sambamba-sort.html"
+  by name. \n\nSource : https://lomereiter.github.io/sambamba/docs/sambamba-sort.html\nSource
+  : https://lomereiter.github.io/sambamba/docs/sambamba-index.html"
 tags:
 - Sambamba
 - Utilities
@@ -9,3 +10,4 @@ tags:
 - Sort
 authors:
 - name: Sandra Hoffberg
+- name: Stephen Pirpinias
