@@ -14,6 +14,8 @@ then
         prefix=$(basename $bamfile .bam)
         mkdir -p "../results/${prefix}"
 
+        echo "Started to Sort"
+
         sambamba sort \
         -t "${num_threads}" \
         ${sort_by} \
@@ -27,11 +29,16 @@ then
         -o "../results/${prefix}/${prefix}.bam" \
         ${bamfile}
 
+        echo "Finished Sorting!"
+        echo "Beginning to Index"
+
         sambamba index \
         -t "${num_threads}" \
         ${show_progress} \
         ${check_bins} \
         "../results/${prefix}/${prefix}.bam" 
+
+        echo "Finshed Indexing"
 
     done
 else
