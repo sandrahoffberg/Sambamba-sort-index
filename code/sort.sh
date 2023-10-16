@@ -9,6 +9,7 @@ echo "Using $num_threads Threads"
 
 if [ "$file_count" -gt 0 ]; 
 then
+
     for bamfile in ${bamfiles};
     do  
         prefix=$(basename $bamfile .bam)
