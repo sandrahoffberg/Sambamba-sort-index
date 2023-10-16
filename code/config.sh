@@ -30,37 +30,37 @@ else
   compress_int="-l ${2}"
 fi
 
-if [ "${3}" == "True" ]; then
-  sort_by="-n"
+if [ -z "${3}" ]; then
+    sort_by="coordinate"
 else
-  sort_by=""
+    sort_by="${5}"
 fi
 
-if [ "${6}" == "True" ]; then
+if [ "${4}" == "True" ]; then
   match_mates="--match-mates"
 else
   match_mates=""
 fi
 
-if [ "${7}" == "True" ]; then
+if [ "${5}" == "True" ]; then
   uncompress_chunks="--uncompressed-chunks"
 else
   uncompress_chunks=""
 fi
 
-if [ "${8}" == "True" ]; then
+if [ "${6}" == "True" ]; then
   show_progress="--show-progress"
 else
   show_progress=""
 fi
 
-if [ "${9}" == "True" ]; then
+if [ "${7}" == "True" ]; then
   generate_index="1"
 else
   generate_index="0"
 fi
 
-if [ "${10}" == "True" ]; then
+if [ "${8}" == "True" ]; then
   check_bins="--check-bins"
 else
   check_bins=""
