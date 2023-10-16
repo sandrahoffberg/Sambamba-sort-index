@@ -2,8 +2,7 @@
 
 <hr>
 
-# Sort and index reads in a BAM file using Sambamba
-
+# Sambamba Sort & Index
 
 ## Input data
 
