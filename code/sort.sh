@@ -30,6 +30,8 @@ then
 
         sambamba index \
         -t "${num_threads}" \
+        ${show_progress} \
+        
         "../results/${prefix}/${prefix}.bam"
 
     done
