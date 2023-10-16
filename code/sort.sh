@@ -20,12 +20,12 @@ then
         echo "Started to Sort"
 
         sambamba sort \
-        -t "${num_threads}" \
-        --show-progress \
         ${sort_by} \
         ${match_mates} \
         ${uncompress_chunks} \
         ${compress_int} \
+        -t "${num_threads}" \
+        --show-progress \
         --tmpdir="${temp_dir}" \
         -o "../results/${prefix}/${prefix}.bam" \
         ${bamfile}
