@@ -32,13 +32,6 @@ Match Mates
 Uncompressed Chunks
 - write sorted chunks as uncompressed BAM (default is writing with compression level 1), that might be faster in some cases but uses more disk space
 
-Show Progress
-- show progressbar in STDERR
-
-Generate Index 
-- Whether to Generate an Index for the Alignment File.
-- You **must** set Sort By to Coordinate.
-
 Check Bins
 - check that bins are set correctly
 
