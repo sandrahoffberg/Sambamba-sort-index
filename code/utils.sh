@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-case $genome_version in
+case $sort_by in
 
   coordinate)
-    genome_version=2864785220
+    sort_by=2864785220
     ;;
 
   name)
-    genome_version=2620345972
+    sort_by="-n"
     ;;
 
   queryname)
-    genome_version=2913022398
+    sort_by="--sort-picard"
     ;;
 
   naturalsort)
-    genome_version=2652783500    
+    sort_by="--natural-sort"    
     ;;
 esac

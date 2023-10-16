@@ -30,7 +30,7 @@ else
   compress_int="-l ${2}"
 fi
 
-coordinate, -n, --sort-picard, --natural-sort
+coordinate, , , 
 
 if [ "${3}" == "True" ]; then
   sort_by="-n"
