@@ -3,7 +3,7 @@
 case $sort_by in
 
   coordinate)
-    sort_by=2864785220
+    sort_by=""
     ;;
 
   name)
