@@ -25,7 +25,7 @@ then
         ${show_progress} \
         ${compress_int} \
         --tmpdir="${temp_dir}" \
-        -o "../results/${prefix}/${prefix}.bam" \
+        -o "../scratch/${prefix}/${prefix}.bam" \
         ${bamfile}
 
         sambamba index \
