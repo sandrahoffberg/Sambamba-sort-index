@@ -14,6 +14,7 @@ then
     do  
         prefix=$(basename $bamfile .bam)
         mkdir -p "../results/${prefix}"
+        mkdir -p "../scratch/${prefix}"
 
         sambamba sort \
         -t "${num_threads}" \
