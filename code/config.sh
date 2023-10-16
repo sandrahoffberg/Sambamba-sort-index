@@ -24,7 +24,6 @@ else
   fi
 fi
 
-
 if [ -z "${2}" ]; then
   compress_int="-l 5"
 else
