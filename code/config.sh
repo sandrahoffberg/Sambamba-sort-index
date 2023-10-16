@@ -67,6 +67,11 @@ else
   show_progress=""
 fi
 
+if [ "${9}" == "True" ]; then
+  generate_index="1"
+else
+  generate_index="0"
+fi
 
 if [ "${10}" == "True" ]; then
   check_bins="--check-bins"
