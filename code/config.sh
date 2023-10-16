@@ -30,8 +30,6 @@ else
   compress_int="-l ${2}"
 fi
 
-coordinate, , , 
-
 if [ "${3}" == "True" ]; then
   sort_by="-n"
 else
