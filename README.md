@@ -11,7 +11,7 @@
 
 ## Outputs
 
-A folder for each sample containing a sorted .bam file and .bai index
+A folder for each sample containing a sorted .bam file and (if you have selected Generate Index) .bai index
 
 ## App Panel Parameters
 
@@ -21,10 +21,27 @@ Number of Threads
 Compression
 - specify compression level of the resulting file (from 0 to 9) [Default: 5]
 
-Sort by
+Sort By
 - coordinate: integer reference ID [Default]
 - qname: lexicographically by name
+- queryname : sort by query name like in picard
+- naturalsort: sort by read name instead of coordinate (so-called 'natural' sort as in samtools)
 
+Match Mates
+- pull mates of the same alignment together when sorting by read name
+
+Uncompressed Chunks
+- write sorted chunks as uncompressed BAM (default is writing with compression level 1), that might be faster in some cases but uses more disk space
+
+Show Progress
+- show progressbar in STDERR
+
+Generate Index 
+- Whether to Generate an Index for the Alignment File.
+- You **must** set Sort By to Coordinate.
+
+Check Bins
+- check that bins are set correctly
 
 ## Source 
 
