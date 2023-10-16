@@ -14,7 +14,7 @@ then
     do  
         prefix=$(basename $bamfile .bam)
         mkdir -p "../results/${prefix}"
-        mkdir -p "../scratch/${prefix}"
+        #mkdir -p "../scratch/${prefix}"
 
         sambamba sort \
         -t "${num_threads}" \
@@ -26,15 +26,15 @@ then
         ${show_progress} \
         ${compress_int} \
         --tmpdir="${temp_dir}" \
-        -o "../scratch/${prefix}/${prefix}.bam" \
+        -o "../results/${prefix}/${prefix}.bam" \
         ${bamfile}
 
         sambamba index \
         -t "${num_threads}" \
         ${show_progress} \
         ${check_bins} \
-        "../scratch/${prefix}/${prefix}.bam" \
-        "../results/${prefix}/${prefix}.bam"
+        "../results/${prefix}/${prefix}.bam" 
+        #"../results/${prefix}/${prefix}.bam"
 
     done
 else
