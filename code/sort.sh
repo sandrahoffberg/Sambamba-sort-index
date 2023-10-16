@@ -2,6 +2,7 @@
 set -ex
 
 source ./config.sh
+source ./utils.sh
 
 echo "Number of Bam Files: $file_count"
 echo "Using $num_threads Threads"
