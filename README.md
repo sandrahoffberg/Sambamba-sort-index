@@ -4,7 +4,7 @@
 
 # Sambamba Sort & Index
 
-## Input data
+## Inputs
 
 **\*.bam** files in the **/data** directory
 
