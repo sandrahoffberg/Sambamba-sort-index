@@ -5,7 +5,7 @@ source ./config.sh
 
 
 echo "Number of Bam Files: $file_count"
-echo "Using $num_threads threads"
+echo "Using $num_threads Threads"
 
 if [ "$file_count" -gt 0 ]; 
 then
