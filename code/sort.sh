@@ -32,14 +32,20 @@ then
         echo "Finished Sorting!"
         echo "Beginning to Index"
 
-        sambamba index \
-        -t "${num_threads}" \
-        ${show_progress} \
-        ${check_bins} \
-        "../results/${prefix}/${prefix}.bam" 
+        if [ ${generate_index} -eq 1 ];
+        then
 
-        echo "Finshed Indexing"
+            sambamba index \
+            -t "${num_threads}" \
+            ${show_progress} \
+            ${check_bins} \
+            "../results/${prefix}/${prefix}.bam" 
 
+            echo "Finshed Indexing"
+        else
+            echo "Index is not being Generated."
+        fi
+        
     done
 else
     echo "No Bam Files Were Found."
