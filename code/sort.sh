@@ -30,10 +30,11 @@ then
         ${bamfile}
 
         echo "Finished Sorting!"
-        echo "Beginning to Index"
 
         if [ ${generate_index} -eq 1 ];
         then
+        
+            echo "Beginning to Index"
 
             sambamba index \
             -t "${num_threads}" \
@@ -45,7 +46,7 @@ then
         else
             echo "Index is not being Generated."
         fi
-        
+
     done
 else
     echo "No Bam Files Were Found."
