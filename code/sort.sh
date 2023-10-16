@@ -20,8 +20,6 @@ then
         sambamba sort \
         -t "${num_threads}" \
         ${sort_by} \
-        ${sort_picard} \
-        ${natural_sort} \
         ${match_mates} \
         ${uncompress_chunks} \
         ${show_progress} \
@@ -44,7 +42,7 @@ then
             "../results/${prefix}/${prefix}.bam" 
 
             echo "Finshed Indexing"
-            
+
         else
             echo "Index is not being Generated."
         fi

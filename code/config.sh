@@ -30,22 +30,12 @@ else
   compress_int="-l ${2}"
 fi
 
+coordinate, -n, --sort-picard, --natural-sort
+
 if [ "${3}" == "True" ]; then
   sort_by="-n"
 else
   sort_by=""
-fi
-
-if [ "${4}" == "True" ]; then
-  sort_picard="--sort-picard"
-else
-  sort_picard=""
-fi
-
-if [ "${5}" == "True" ]; then
-  natural_sort="--natural-sort"
-else
-  natural_sort=""
 fi
 
 if [ "${6}" == "True" ]; then
