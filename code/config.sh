@@ -67,7 +67,8 @@ else
   show_progress=""
 fi
 
-if [ "${9}" == "True" ]; then
+
+if [ "${10}" == "True" ]; then
   check_bins="--check-bins"
 else
   check_bins=""
