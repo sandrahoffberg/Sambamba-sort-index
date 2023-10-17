@@ -4,17 +4,19 @@ case $sort_by in
 
   coordinate)
     sort_by=""
+    match_mates="" #Match mates cannot be set with coordinate sorting
     ;;
 
   name)
-    sort_by="-n"
+    sort_by="--sort-by-name"
     ;;
 
-  queryname)
+  picard)
     sort_by="--sort-picard"
+    match_mates="" #Match mates cannot be set with coordinate sorting
     ;;
 
-  naturalsort)
+  natural)
     sort_by="--natural-sort"    
     ;;
 esac

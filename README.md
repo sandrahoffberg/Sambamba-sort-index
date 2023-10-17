@@ -2,7 +2,7 @@
 
 <hr>
 
-# Sambamba Sort & Index
+# Sambamba Sort and Index
 
 ## Inputs
 
@@ -10,27 +10,28 @@
 
 ## Outputs
 
-A folder for each sample containing a sorted .bam file and (if you have selected Generate Index) .bai index.
+A folder for each sample containing a sorted .bam file and (for coordinate sorted files) .bai index.
 
 ## App Panel Parameters
 
 Number of Threads
-- Number of threads reserved for sambamba
+- Number of threads reserved for sambamba. If not set, defaults to all available threads. [Default: None]
 
 Compression
-- specify compression level of the resulting file (from 0 to 9) [Default: 5]
+- Compression level of the resulting file (from 0 to 9) [Default: 5]
 
 Sort By
-- coordinate: integer reference ID [Default]
-- qname: lexicographically by name
-- queryname : sort by query name like in picard
-- naturalsort: sort by read name instead of coordinate (so-called 'natural' sort as in samtools)
+- coordinate: sort by chromosome and location [Default]
+- qname: lexicographically by read name
+- queryname : sort by query name mimicking picard
+- naturalsort: sort by read name instead of coordinate (so-called 'natural' sort as in samtools). Essentially, numbers sort as numbers instead of lexicographically (i.e. 1 is followed by 2 instead of 10)
+- none: skip sorting
 
 Match Mates
 - pull mates of the same alignment together when sorting by read name
 
 Uncompressed Chunks
-- write sorted chunks as uncompressed BAM (default is writing with compression level 1), that might be faster in some cases but uses more disk space
+- write sorted chunks as uncompressed BAM (default is writing with compression level 1). Might be faster in some cases but uses more disk space
 
 Check Bins
 - check that bins are set correctly

@@ -1,5 +1,5 @@
 metadata_version: 1
-name: Sambamba Sort & Index
+name: Sambamba Sort and Index
 description: "Sort reads in a BAM file by (integer) reference ID or lexicographically
   by name. \n\nSource : https://lomereiter.github.io/sambamba/docs/sambamba-sort.html\nSource
   : https://lomereiter.github.io/sambamba/docs/sambamba-index.html"

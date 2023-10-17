@@ -17,37 +17,45 @@ then
         prefix=$(basename $bamfile .bam)
         mkdir -p "../results/${prefix}"
 
-        echo "Started to Sort"
 
-        sambamba sort \
-        ${sort_by} \
-        ${match_mates} \
-        ${uncompress_chunks} \
-        ${compress_int} \
-        -t "${num_threads}" \
-        --show-progress \
-        --tmpdir="${temp_dir}" \
-        -o "../results/${prefix}/${prefix}.bam" \
-        ${bamfile}
+        if [ -z $sort_by ] || [ $sort_by != "none" ]; 
+        then 
+            echo "Started to Sort"
 
-        echo "Finished Sorting!"
-
-        if [ ${sort_by} == "coordinate" ];
-        then
-
-            echo "Beginning to Index"
-
-            sambamba index \
-            --show-progress \
+            sambamba sort \
+            ${sort_by} \
+            ${match_mates} \
+            ${uncompress_chunks} \
+            ${compress_int} \
             -t "${num_threads}" \
-            ${check_bins} \
-            "../results/${prefix}/${prefix}.bam" 
+            --show-progress \
+            --tmpdir="${temp_dir}" \
+            -o "../results/${prefix}/${prefix}.bam" \
+            ${bamfile}
 
-            echo "Finshed Indexing"
-
+            echo "Finished Sorting!"
         else
-            echo "Index is not being Generated."
+            cp ${bamfile} "../results/${prefix}/${prefix}.bam"
         fi
+
+        NOT_SORTED=0
+
+        sambamba index \
+        --show-progress \
+        -t "${num_threads}" \
+        ${check_bins} \
+        "../results/${prefix}/${prefix}.bam" || NOT_SORTED=$?
+
+        if [ $NOT_SORTED != 0 ];
+        then
+            echo "../results/${prefix}/${prefix}.bam not sorted, no index generated"
+            rm ../results/${prefix}/${prefix}.bam.bai
+        else
+            echo "Finished Indexing"
+        fi
+
+        echo "Finshed Indexing"
+
 
     done
 else
