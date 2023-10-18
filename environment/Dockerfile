@@ -1,4 +1,4 @@
-# hash:sha256:174de7cb7005f46f39bd45227357ce3f7f443bd1b2e35f8af413511c5f3a0b29
+# hash:sha256:34bc556b789feb6a3b9da95730b6e1b2893361ca7d951f536becbbbad69999fd
 FROM registry.apps.codeocean.com/codeocean/mambaforge3:22.11.1-4-ubuntu22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -12,6 +12,3 @@ RUN mamba install -y --channel=bioconda \
         git==2.41.0 \
         sambamba==1.0 \
     && mamba clean -ya
-
-RUN pip install -U --no-cache-dir \
-    code-ocean-aux-tools==1.0.8
