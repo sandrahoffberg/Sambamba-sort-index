@@ -16,11 +16,11 @@ bamfiles=$(find -L ../data -name "*.bam")
 file_count=$(echo $bamfiles | wc -w)
 
 if [ -z "${1}" ]; then
-  num_threads=$CO_CPUS
+  num_threads=$(get_cpu_count)
 else
-  if [ "${1}" -gt $CO_CPUS ]; then
+  if [ "${1}" -gt $(get_cpu_count) ]; then
     echo "Requesting more threads than available. Setting to Max Available."
-    num_threads=$CO_CPUS
+    num_threads=$(get_cpu_count)
   else
     num_threads="${1}"
   fi
