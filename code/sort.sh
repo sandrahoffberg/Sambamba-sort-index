@@ -48,7 +48,7 @@ then
 
         if [ $NOT_SORTED != 0 ];
         then
-            echo "../results/${prefix}/${prefix}.bam not sorted, no index generated"
+            echo "../results/${prefix}/${prefix}.bam not coordinate sorted, no index generated"
             rm ../results/${prefix}/${prefix}.bam.bai
         else
             echo "Finished Indexing"
